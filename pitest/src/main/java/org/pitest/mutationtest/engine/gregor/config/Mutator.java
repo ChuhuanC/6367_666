@@ -61,6 +61,15 @@ import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORLEMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORLTMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORNEMutator;
 
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORADDMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORDIVMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORMULMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORREMMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORSUBMutator;
+
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AODMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AODMutator2;
+
 public final class Mutator {
 
   private static final Map<String, Iterable<MethodMutatorFactory>> MUTATORS = new LinkedHashMap<>();
@@ -93,6 +102,15 @@ public final class Mutator {
     add("LE_MUTATOR", RORLEMutator.LE_MUTATOR);
     add("LT_MUTATOR", RORLTMutator.LT_MUTATOR);
     add("NE_MUTATOR", RORNEMutator.NE_MUTATOR);
+    
+    add("MATH_ADD", AORADDMutator.ADD_MUTATOR);
+    add("MATH_SUB", AORSUBMutator.SUB_MUTATOR);
+    add("MATH_MUL", AORMULMutator.MUL_MUTATOR);
+    add("MATH_DIV", AORDIVMutator.DIV_MUTATOR);
+    add("MATH_REM", AORREMMutator.REM_MUTATOR);
+    
+    add("AOD_MUTATOR", AODMutator.AOD_MUTATOR);
+    add("AOD_MUTATOR2", AODMutator2.AOD_MUTATOR2);
     /**
      * Default mutator that mutates binary arithmetic operations.
      */
