@@ -54,6 +54,13 @@ import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveIncreme
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveSwitchMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.SwitchMutator;
 
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.ROREQMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORGEMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORGTMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORLEMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORLTMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.RORNEMutator;
+
 public final class Mutator {
 
   private static final Map<String, Iterable<MethodMutatorFactory>> MUTATORS = new LinkedHashMap<>();
@@ -76,7 +83,16 @@ public final class Mutator {
      * constants.
      */
     add("INLINE_CONSTS", new InlineConstantMutator());
-
+    
+    /**
+     * ADD BY CHUHUAN CHEN RUINONG TIAN AND YUFEI ZHANG 
+     */
+    add("EQ_MUTATOR", ROREQMutator.EQ_MUTATOR);
+    add("GE_MUTATOR", RORGEMutator.GE_MUTATOR);
+    add("GT_MUTATOR", RORGTMutator.GT_MUTATOR);
+    add("LE_MUTATOR", RORLEMutator.LE_MUTATOR);
+    add("LT_MUTATOR", RORLTMutator.LT_MUTATOR);
+    add("NE_MUTATOR", RORNEMutator.NE_MUTATOR);
     /**
      * Default mutator that mutates binary arithmetic operations.
      */
