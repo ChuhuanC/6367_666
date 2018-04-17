@@ -111,6 +111,8 @@ public final class Mutator {
     
     add("AOD_MUTATOR", AODMutator.AOD_MUTATOR);
     add("AOD_MUTATOR2", AODMutator2.AOD_MUTATOR2);
+    
+    add("M1_MUTATOR", RORNEMutator.NE_MUTATOR);
     /**
      * Default mutator that mutates binary arithmetic operations.
      */
