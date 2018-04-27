@@ -70,6 +70,10 @@ import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AORSUBMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AODMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.TCZ.AODMutator2;
 
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.M1;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.ABSMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.TCZ.UOIMutator;
+
 public final class Mutator {
 
   private static final Map<String, Iterable<MethodMutatorFactory>> MUTATORS = new LinkedHashMap<>();
@@ -112,7 +116,12 @@ public final class Mutator {
     add("AOD_MUTATOR", AODMutator.AOD_MUTATOR);
     add("AOD_MUTATOR2", AODMutator2.AOD_MUTATOR2);
     
-    add("M1_MUTATOR", RORNEMutator.NE_MUTATOR);
+    add("M1",new M1());
+    add("ABS_MUTATOR", ABSMutator.ABS_MUTATOR);
+    add("UOI1_MUTATOR", UOIMutator.RemoveIncrementsMutator.UOI_MUTATOR);
+    add("UOI2_MUTATOR", UOIMutator.AddIncrementsMutator.UOI_MUTATOR);
+    add("UOI3_MUTATOR", UOIMutator.AddDecrementsMutator.UOI_MUTATOR);
+    
     /**
      * Default mutator that mutates binary arithmetic operations.
      */
